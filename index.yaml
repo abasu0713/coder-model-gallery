@@ -15,7 +15,7 @@
     - https://huggingface.co/Qwen/Qwen2.5-Coder-1.5B
     - https://huggingface.co/alphaduriendur/Qwen2.5-Coder-1.5B-Q8_0-GGUF
   description: |
-    Qwen2.5-Coder is the latest series of Code-Specific Qwen large language models (formerly known as CodeQwen). As of now, Qwen2.5-Coder has covered six mainstream model sizes, 0.5, 1.5, 3, 7, 14, 32 billion parameters, to meet the needs of different developers. Qwen2.5-Coder brings the following improvements upon CodeQwen1.5
+    Qwen2.5-Coder is the latest series of Code-Specific Qwen large language models (formerly known as CodeQwen). As of now, Qwen2.5-Coder has covered six mainstream model sizes, 0.5, 1.5, 3, 7, 14, 32 billion parameters, to meet the needs of different developers.
   overrides:
     parameters:
       model: qwen2.5-coder-1.5b-q8_0.gguf
