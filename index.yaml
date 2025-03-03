@@ -29,29 +29,6 @@
       uri: "huggingface://alphaduriendur/Qwen2.5-Coder-1.5B-Q8_0-GGUF/qwen2.5-coder-1.5b-q8_0.gguf"
 - &gemma
   url: "github:mudler/LocalAI/gallery/gemma.yaml@master"
-  name: "codegemma-2b"
-  icon: https://avatars.githubusercontent.com/u/1342004
-  license: gemma
-  urls:
-    - https://ai.google.dev/gemma/docs
-    - https://huggingface.co/alphaduriendur/codegemma-2b-Q4_K_M-GGUF
-  description: |
-    Open source LLM from Google
-  tags:
-    - llm
-    - gguf
-    - gpu
-    - cpu
-    - gemma
-  overrides:
-    parameters:
-      model: codegemma-2b-q4_k_m.gguf
-  files:
-    - filename: codegemma-2b-q4_k_m.gguf
-      sha256: be3d6e362dbb1d5942a468f6322930f501286ef616d47e05ce65a89a3a8aeae8
-      uri: huggingface://alphaduriendur/codegemma-2b-Q4_K_M-GGUF/codegemma-2b-q4_k_m.gguf
-- !!merge <<: *gemma
-  url: "github:mudler/LocalAI/gallery/gemma.yaml@master"
   name: "gemma-2b-chat"
   urls:
     - https://ai.google.dev/gemma/docs  
