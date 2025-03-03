@@ -50,3 +50,123 @@
     - filename: codegemma-2b-q4_k_m.gguf
       sha256: be3d6e362dbb1d5942a468f6322930f501286ef616d47e05ce65a89a3a8aeae8
       uri: huggingface://alphaduriendur/codegemma-2b-Q4_K_M-GGUF/codegemma-2b-q4_k_m.gguf
+- !!merge <<: *gemma
+  url: "github:mudler/LocalAI/gallery/gemma.yaml@master"
+  name: "gemma-2b-chat"
+  urls:
+    - https://ai.google.dev/gemma/docs  
+    - https://huggingface.co/alphaduriendur/gemma-2b-it-Q4_K_M-GGUF
+  icon: https://avatars.githubusercontent.com/u/1342004
+  license: gemma
+  tags:
+    - llm
+    - gguf
+    - gpu
+    - cpu
+    - gemma
+  description: |
+    Open source LLM from Google (Instruction Tuned)
+  overrides:
+    parameters:
+      model: gemma-2b-it-q4_k_m.gguf
+  files:
+    - filename: gemma-2b-it-q4_k_m.gguf
+      sha256: 21d5e00ca1795b5cfd535b1b38d536ff142845c80fde0638110186a3899a9c17
+      uri: huggingface://alphaduriendur/gemma-2b-it-Q4_K_M-GGUF/gemma-2b-it-q4_k_m.gguf
+- &codellama
+  url: "github:mudler/LocalAI/gallery/codellama.yaml@master" ### START Codellama
+  name: "codellama-7b"
+  license: llama2
+  description: |
+    Code Llama is a collection of pretrained and fine-tuned generative text models ranging in scale from 7 billion to 34 billion parameters. This model is designed for general code synthesis and understanding.
+  urls:
+    - https://huggingface.co/alphaduriendur/CodeLlama-7b-hf-Q4_K_M-GGUF
+    - https://huggingface.co/meta-llama/CodeLlama-7b-hf
+  tags:
+    - llm
+    - gguf
+    - gpu
+    - llama2
+    - cpu
+  overrides:
+    parameters:
+      model: codellama-7b-hf-q4_k_m.gguf
+  files:
+    - filename: "codellama-7b-hf-q4_k_m.gguf"
+      sha256: "d842b9fd4bc5aecb257a8137b217fb5cc1e3f3f7a00b210c4a612ee07cd1434c"
+      uri: "huggingface://alphaduriendur/CodeLlama-7b-hf-Q4_K_M-GGUF/codellama-7b-hf-q4_k_m.gguf"
+- &llama3
+  url: "github:mudler/LocalAI/gallery/llama3.2-quantized.yaml@master"
+  icon: https://avatars.githubusercontent.com/u/153379578
+  name: "Llama-3.2-3B-Instruct"
+  license: llama3
+  description: |
+    The Llama 3.2 collection of multilingual large language models (LLMs) is a collection of pretrained and instruction-tuned generative models in 1B and 3B sizes (text in/text out). 
+    
+    The Llama 3.2 instruction-tuned text only models are optimized for multilingual dialogue use cases, including agentic retrieval and summarization tasks. They outperform many of the available open source and closed chat models on common industry benchmarks.
+  urls:
+    - https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct
+    - https://huggingface.co/alphaduriendur/Llama-3.2-3B-Instruct-Q4_K_M-GGUF
+  tags:
+    - llm
+    - gguf
+    - gpu
+    - cpu
+    - llama3
+  overrides:
+    parameters:
+      model: llama-3.2-3b-instruct-q4_k_m.gguf
+  files:
+    - filename: llama-3.2-3b-instruct-q4_k_m.gguf
+      uri: huggingface://alphaduriendur/Llama-3.2-3B-Instruct-Q4_K_M-GGUF/llama-3.2-3b-instruct-q4_k_m.gguf
+      sha256: c5e6cf2c071a429e2380d2d1182c06a20b8c999d0c059636530e4a84beb8e8d4
+- !!merge <<: *llama3
+  url: "github:mudler/LocalAI/gallery/llama3.2-quantized.yaml@master"
+  name: "Llama-3.2-3B"
+  urls:
+    - https://huggingface.co/meta-llama/Llama-3.2-3B
+    - https://huggingface.co/alphaduriendur/Llama-3.2-3B-Q4_K_M-GGUF
+  icon: https://avatars.githubusercontent.com/u/153379578
+  license: llama3
+  tags:
+    - llm
+    - gguf
+    - gpu
+    - cpu
+    - llama3
+  description: |
+    The Llama 3.2 collection of multilingual large language models (LLMs) is a collection of pretrained and instruction-tuned generative models in 1B and 3B sizes (text in/text out). 
+    The Llama 3.2 instruction-tuned text only models are optimized for multilingual dialogue use cases, including agentic retrieval and summarization tasks. 
+    They outperform many of the available open source and closed chat models on common industry benchmarks.
+  overrides:
+    parameters:
+      model: llama-3.2-3b-q4_k_m.gguf
+  files:
+    - filename: llama-3.2-3b-q4_k_m.gguf
+      sha256: 3d5329855afbf123308eb1ff2e322db6ef1066f17aaa35cd5661838cb92a12e6
+      uri: huggingface://alphaduriendur/Llama-3.2-3B-Q4_K_M-GGUF/llama-3.2-3b-q4_k_m.gguf
+- !!merge <<: *llama3
+  url: "github:mudler/LocalAI/gallery/llama3.2-quantized.yaml@master"
+  name: "Llama-3.2-1B"
+  urls:
+    - https://huggingface.co/meta-llama/Llama-3.2-1B
+    - https://huggingface.co/alphaduriendur/Llama-3.2-1B-Q4_K_M-GGUF
+  icon: https://avatars.githubusercontent.com/u/153379578
+  license: llama3
+  tags:
+    - llm
+    - gguf
+    - gpu
+    - cpu
+    - llama3
+  description: |
+    The Llama 3.2 collection of multilingual large language models (LLMs) is a collection of pretrained and instruction-tuned generative models in 1B and 3B sizes (text in/text out). 
+    The Llama 3.2 instruction-tuned text only models are optimized for multilingual dialogue use cases, including agentic retrieval and summarization tasks. 
+    They outperform many of the available open source and closed chat models on common industry benchmarks.
+  overrides:
+    parameters:
+      model: llama-3.2-1b-q4_k_m.gguf
+  files:
+    - filename: llama-3.2-1b-q4_k_m.gguf
+      sha256: f8c965497de4f18749a9e07a58a28c1fd60d00866da392f10a5e49ec3d0318ab
+      uri: huggingface://alphaduriendur/Llama-3.2-1B-Q4_K_M-GGUF/llama-3.2-1b-q4_k_m.gguf
