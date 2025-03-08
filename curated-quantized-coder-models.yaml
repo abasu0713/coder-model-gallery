@@ -183,54 +183,6 @@
       uri: huggingface://alphaduriendur/Llama-3.2-1B-Q4_K_M-GGUF/llama-3.2-1b-q4_k_m.gguf
 - &deepseek
   url: "github:mudler/LocalAI/gallery/deepseek.yaml@master" ## Deepseek
-  name: "deepseek-coder-v2-lite-base"
-  icon: "https://avatars.githubusercontent.com/u/148330874"
-  license: deepseek
-  description: |
-    DeepSeek-Coder-V2, an open-source Mixture-of-Experts (MoE) code language model that achieves performance comparable to GPT4-Turbo in code-specific tasks. Specifically, DeepSeek-Coder-V2 is further pre-trained from DeepSeek-Coder-V2-Base with 6 trillion tokens sourced from a high-quality and multi-source corpus. Through this continued pre-training, DeepSeek-Coder-V2 substantially enhances the coding and mathematical reasoning capabilities of DeepSeek-Coder-V2-Base, while maintaining comparable performance in general language tasks. Compared to DeepSeek-Coder, DeepSeek-Coder-V2 demonstrates significant advancements in various aspects of code-related tasks, as well as reasoning and general capabilities. Additionally, DeepSeek-Coder-V2 expands its support for programming languages from 86 to 338, while extending the context length from 16K to 128K.
-    In standard benchmark evaluations, DeepSeek-Coder-V2 achieves superior performance compared to closed-source models such as GPT4-Turbo, Claude 3 Opus, and Gemini 1.5 Pro in coding and math benchmarks. The list of supported programming languages can be found in the paper.
-  urls:
-    - https://huggingface.co/deepseek-ai/DeepSeek-Coder-V2-Lite-Base
-    - https://huggingface.co/alphaduriendur/DeepSeek-Coder-V2-Lite-Base-Q4_K_M-GGUF
-  tags:
-    - llm
-    - gguf
-    - gpu
-    - deepseek
-    - cpu
-  overrides:
-    parameters:
-      model: deepseek-coder-v2-lite-base-q4_k_m.gguf
-  files:
-    - filename: deepseek-coder-v2-lite-base-q4_k_m.gguf
-      sha256: 4e01ad8eb4879f7a42fc533e5a9da8ad6fae6604004aa9de4f931a3116ffed77
-      uri: huggingface://alphaduriendur/DeepSeek-Coder-V2-Lite-Base-Q4_K_M-GGUF/deepseek-coder-v2-lite-base-q4_k_m.gguf
-- !!merge <<: *deepseek
-  url: "github:mudler/LocalAI/gallery/deepseek.yaml@master" ## Deepseek
-  name: "deepseek-coder-v2-lite-instruct"
-  icon: "https://avatars.githubusercontent.com/u/148330874"
-  license: deepseek
-  description: |
-    DeepSeek-Coder-V2, an open-source Mixture-of-Experts (MoE) code language model that achieves performance comparable to GPT4-Turbo in code-specific tasks. Specifically, DeepSeek-Coder-V2 is further pre-trained from DeepSeek-Coder-V2-Base with 6 trillion tokens sourced from a high-quality and multi-source corpus. Through this continued pre-training, DeepSeek-Coder-V2 substantially enhances the coding and mathematical reasoning capabilities of DeepSeek-Coder-V2-Base, while maintaining comparable performance in general language tasks. Compared to DeepSeek-Coder, DeepSeek-Coder-V2 demonstrates significant advancements in various aspects of code-related tasks, as well as reasoning and general capabilities. Additionally, DeepSeek-Coder-V2 expands its support for programming languages from 86 to 338, while extending the context length from 16K to 128K.
-    In standard benchmark evaluations, DeepSeek-Coder-V2 achieves superior performance compared to closed-source models such as GPT4-Turbo, Claude 3 Opus, and Gemini 1.5 Pro in coding and math benchmarks. The list of supported programming languages can be found in the paper.
-  urls:
-    - https://huggingface.co/deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct
-    - https://huggingface.co/alphaduriendur/DeepSeek-Coder-V2-Lite-Instruct-Q4_K_M-GGUF/tree/main
-  tags:
-    - llm
-    - gguf
-    - gpu
-    - deepseek
-    - cpu
-  overrides:
-    parameters:
-      model: deepseek-coder-v2-lite-instruct-q4_k_m.gguf
-  files:
-    - filename: deepseek-coder-v2-lite-instruct-q4_k_m.gguf
-      sha256: 07e555e8d918a36e8c4d8e9aaafbadb8e2992148816e65004033a24e08721096
-      uri: huggingface://alphaduriendur/DeepSeek-Coder-V2-Lite-Instruct-Q4_K_M-GGUF/deepseek-coder-v2-lite-instruct-q4_k_m.gguf
-- !!merge <<: *deepseek
-  url: "github:mudler/LocalAI/gallery/deepseek.yaml@master" ## Deepseek
   name: "deepseek-coder-1.3b-instruct"
   icon: "https://avatars.githubusercontent.com/u/148330874"
   license: deepseek
