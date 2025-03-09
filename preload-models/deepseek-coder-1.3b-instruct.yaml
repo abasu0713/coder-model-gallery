@@ -1,0 +1,23 @@
+url: "github:mudler/LocalAI/gallery/deepseek.yaml@master" ## Deepseek
+name: "deepseek-coder-1.3b-instruct"
+icon: "https://avatars.githubusercontent.com/u/148330874"
+license: deepseek
+description: |
+  DeepSeek-Coder-V2, an open-source Mixture-of-Experts (MoE) code language model that achieves performance comparable to GPT4-Turbo in code-specific tasks. Specifically, DeepSeek-Coder-V2 is further pre-trained from DeepSeek-Coder-V2-Base with 6 trillion tokens sourced from a high-quality and multi-source corpus. Through this continued pre-training, DeepSeek-Coder-V2 substantially enhances the coding and mathematical reasoning capabilities of DeepSeek-Coder-V2-Base, while maintaining comparable performance in general language tasks. Compared to DeepSeek-Coder, DeepSeek-Coder-V2 demonstrates significant advancements in various aspects of code-related tasks, as well as reasoning and general capabilities. Additionally, DeepSeek-Coder-V2 expands its support for programming languages from 86 to 338, while extending the context length from 16K to 128K.
+  In standard benchmark evaluations, DeepSeek-Coder-V2 achieves superior performance compared to closed-source models such as GPT4-Turbo, Claude 3 Opus, and Gemini 1.5 Pro in coding and math benchmarks. The list of supported programming languages can be found in the paper.
+urls:
+  - https://huggingface.co/deepseek-ai/deepseek-coder-1.3b-instruct
+  - https://huggingface.co/alphaduriendur/deepseek-coder-1.3b-instruct-Q4_K_M-GGUF
+tags:
+  - llm
+  - gguf
+  - gpu
+  - deepseek
+  - cpu
+overrides:
+  parameters:
+    model: deepseek-coder-1.3b-instruct-q4_k_m.gguf
+files:
+  - filename: deepseek-coder-1.3b-instruct-q4_k_m.gguf
+    sha256: d8c7e0d0cb722df34bc906bac28e2fc4065dc76638c67e08271710754b5102ca
+    uri: huggingface://alphaduriendur/deepseek-coder-1.3b-instruct-Q4_K_M-GGUF/deepseek-coder-1.3b-instruct-q4_k_m.gguf
