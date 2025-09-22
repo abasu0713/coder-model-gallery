@@ -148,20 +148,6 @@
     - filename: Athena-codegemma-2-2b-it.Q4_K_M.gguf
       sha256: 59ce17023438b0da603dd211c7d39f78e7acac4108258ac0818a97a4ca7d64e3
       uri: huggingface://mradermacher/Athena-codegemma-2-2b-it-GGUF/Athena-codegemma-2-2b-it.Q4_K_M.gguf
-- !!merge <<: *gemma
-  name: "codegemma-7b-it"
-  urls:
-    - https://huggingface.co/google/codegemma-7b-it
-    - https://huggingface.co/alphaduriendur/codegemma-7b-it-Q4_K_M-GGUF
-  description: |
-    CodeGemma is a collection of lightweight open code models built on top of Gemma. CodeGemma models are text-to-text and text-to-code decoder-only models and are available as a 7 billion pretrained variant that specializes in code completion and code generation tasks, a 7 billion parameter instruction-tuned variant for code chat and instruction following and a 2 billion parameter pretrained variant for fast code completion.
-  overrides:
-    parameters:
-      model: codegemma-7b-it-q4_k_m.gguf
-    files:
-      - filename: codegemma-7b-it-q4_k_m.gguf
-        sha256: dd7eb9f33ea95f300ae09a5ff08eaecb91181157fffea2372581467713c5c87e
-        uri: huggingface://alphaduriendur/codegemma-7b-it-Q4_K_M-GGUF/codegemma-7b-it-q4_k_m.gguf
 - &llama3
   url: "github:mudler/LocalAI/gallery/llama3.2-quantized.yaml@master"
   icon: https://avatars.githubusercontent.com/u/153379578
@@ -261,33 +247,10 @@
     - filename: deepseek-coder-1.3b-instruct-q4_k_m.gguf
       sha256: d8c7e0d0cb722df34bc906bac28e2fc4065dc76638c67e08271710754b5102ca
       uri: huggingface://alphaduriendur/deepseek-coder-1.3b-instruct-Q4_K_M-GGUF/deepseek-coder-1.3b-instruct-q4_k_m.gguf
-- !!merge <<: *deepseek
-  url: "github:mudler/LocalAI/gallery/deepseek.yaml@master" ## Deepseek
-  name: "deepseek-coder-6.7b-instruct"
-  icon: "https://avatars.githubusercontent.com/u/148330874"
-  license: deepseek
-  description: |
-    DeepSeek-Coder-V2, an open-source Mixture-of-Experts (MoE) code language model that achieves performance comparable to GPT4-Turbo in code-specific tasks. Specifically, DeepSeek-Coder-V2 is further pre-trained from DeepSeek-Coder-V2-Base with 6 trillion tokens sourced from a high-quality and multi-source corpus. Through this continued pre-training, DeepSeek-Coder-V2 substantially enhances the coding and mathematical reasoning capabilities of DeepSeek-Coder-V2-Base, while maintaining comparable performance in general language tasks. Compared to DeepSeek-Coder, DeepSeek-Coder-V2 demonstrates significant advancements in various aspects of code-related tasks, as well as reasoning and general capabilities. Additionally, DeepSeek-Coder-V2 expands its support for programming languages from 86 to 338, while extending the context length from 16K to 128K.
-    In standard benchmark evaluations, DeepSeek-Coder-V2 achieves superior performance compared to closed-source models such as GPT4-Turbo, Claude 3 Opus, and Gemini 1.5 Pro in coding and math benchmarks. The list of supported programming languages can be found in the paper.
-  urls:
-    - https://huggingface.co/deepseek-ai/deepseek-coder-6.7b-instruct
-    - https://huggingface.co/alphaduriendur/deepseek-coder-6.7b-instruct-Q4_K_M-GGUF
-  tags:
-    - llm
-    - gguf
-    - gpu
-    - deepseek
-    - cpu
-  overrides:
-    parameters:
-      model: deepseek-coder-6.7b-instruct-q4_k_m.gguf
-  files:
-    - filename: deepseek-coder-6.7b-instruct-q4_k_m.gguf
-      sha256: 864505d0bde7349eb11fcad62a834085bb47f34227e076cd6d8f55e8cd1b8ce4
-      uri: huggingface://alphaduriendur/deepseek-coder-6.7b-instruct-Q4_K_M-GGUF/deepseek-coder-6.7b-instruct-q4_k_m.gguf
 - &codellama
   url: "github:mudler/LocalAI/gallery/codellama.yaml@master" ### START Codellama
   name: "codellama-7b-hf-Q4_0"
+  icon: https://avatars.githubusercontent.com/u/153379578
   license: llama2
   description: |
     Code Llama is a collection of pretrained and fine-tuned generative text models ranging in scale from 7 billion to 34 billion parameters. This model is designed for general code synthesis and understanding.
