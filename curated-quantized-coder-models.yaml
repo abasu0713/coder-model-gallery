@@ -134,6 +134,34 @@
     - filename: gemma-2b-it-q4_k_m.gguf
       sha256: 21d5e00ca1795b5cfd535b1b38d536ff142845c80fde0638110186a3899a9c17
       uri: huggingface://alphaduriendur/gemma-2b-it-Q4_K_M-GGUF/gemma-2b-it-q4_k_m.gguf
+- !!merge <<: *gemma
+  name: "athena-codegemma-2-2b-it"
+  urls:
+    - https://huggingface.co/EpistemeAI/Athena-codegemma-2-2b-it
+    - https://huggingface.co/mradermacher/Athena-codegemma-2-2b-it-GGUF
+  description: |
+    Supervised fine tuned (sft unsloth) for coding with EpistemeAI coding dataset.
+  overrides:
+    parameters:
+      model: Athena-codegemma-2-2b-it.Q4_K_M.gguf
+  files:
+    - filename: Athena-codegemma-2-2b-it.Q4_K_M.gguf
+      sha256: 59ce17023438b0da603dd211c7d39f78e7acac4108258ac0818a97a4ca7d64e3
+      uri: huggingface://mradermacher/Athena-codegemma-2-2b-it-GGUF/Athena-codegemma-2-2b-it.Q4_K_M.gguf
+- !!merge <<: *gemma
+  name: "codegemma-7b-it"
+  urls:
+    - https://huggingface.co/google/codegemma-7b-it
+    - https://huggingface.co/alphaduriendur/codegemma-7b-it-Q4_K_M-GGUF
+  description: |
+    CodeGemma is a collection of lightweight open code models built on top of Gemma. CodeGemma models are text-to-text and text-to-code decoder-only models and are available as a 7 billion pretrained variant that specializes in code completion and code generation tasks, a 7 billion parameter instruction-tuned variant for code chat and instruction following and a 2 billion parameter pretrained variant for fast code completion.
+  overrides:
+    parameters:
+      model: codegemma-7b-it-q4_k_m.gguf
+    files:
+      - filename: codegemma-7b-it-q4_k_m.gguf
+        sha256: dd7eb9f33ea95f300ae09a5ff08eaecb91181157fffea2372581467713c5c87e
+        uri: huggingface://alphaduriendur/codegemma-7b-it-Q4_K_M-GGUF/codegemma-7b-it-q4_k_m.gguf
 - &llama3
   url: "github:mudler/LocalAI/gallery/llama3.2-quantized.yaml@master"
   icon: https://avatars.githubusercontent.com/u/153379578
@@ -257,3 +285,25 @@
     - filename: deepseek-coder-6.7b-instruct-q4_k_m.gguf
       sha256: 864505d0bde7349eb11fcad62a834085bb47f34227e076cd6d8f55e8cd1b8ce4
       uri: huggingface://alphaduriendur/deepseek-coder-6.7b-instruct-Q4_K_M-GGUF/deepseek-coder-6.7b-instruct-q4_k_m.gguf
+- &codellama
+  url: "github:mudler/LocalAI/gallery/codellama.yaml@master" ### START Codellama
+  name: "codellama-7b-hf-Q4_0"
+  license: llama2
+  description: |
+    Code Llama is a collection of pretrained and fine-tuned generative text models ranging in scale from 7 billion to 34 billion parameters. This model is designed for general code synthesis and understanding.
+  urls:
+    - https://huggingface.co/alphaduriendur/CodeLlama-7b-hf-Q4_0-GGUF
+    - https://huggingface.co/meta-llama/CodeLlama-7b-hf
+  tags:
+    - llm
+    - gguf
+    - gpu
+    - llama2
+    - cpu
+  overrides:
+    parameters:
+      model: codellama-7b-hf-q4_0.gguf
+  files:
+    - filename: "codellama-7b-hf-q4_0.gguf"
+      sha256: "02b93a5165bfd08382d6cd195de6528213020e8bf0e49976ccff9c7dc948c0be"
+      uri: "huggingface://alphaduriendur/CodeLlama-7b-hf-Q4_0-GGUF/codellama-7b-hf-q4_0.gguf"
