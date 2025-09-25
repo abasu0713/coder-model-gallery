@@ -1,0 +1,266 @@
+---
+- &llama32
+  url: "github:mudler/LocalAI/gallery/llama3.2-quantized.yaml@master"
+  icon: https://avatars.githubusercontent.com/u/153379578
+  name: "Llama-3.2-3B-q4_k_m"
+  license: llama3
+  description: |
+    The Llama 3.2 collection of multilingual large language models (LLMs) is a collection of pretrained and instruction-tuned generative models in 1B and 3B sizes (text in/text out). The Llama 3.2 instruction-tuned text only models are optimized for multilingual dialogue use cases, including agentic retrieval and summarization tasks. They outperform many of the available open source and closed chat models on common industry benchmarks.
+  urls:
+    - https://huggingface.co/meta-llama/Llama-3.2-3B
+    - https://huggingface.co/alphaduriendur/Llama-3.2-3B-Q4_K_M-GGUF
+  tags:
+    - llm
+    - gguf
+    - gpu
+    - cpu
+    - llama3
+  overrides:
+    parameters:
+      model: llama-3.2-3b-q4_k_m.gguf
+  files:
+    - filename: llama-3.2-3b-q4_k_m.gguf
+      uri: huggingface://alphaduriendur/Llama-3.2-3B-Q4_K_M-GGUF/llama-3.2-3b-q4_k_m.gguf
+      sha256: 3d5329855afbf123308eb1ff2e322db6ef1066f17aaa35cd5661838cb92a12e6
+- !!merge <<: *llama32
+  description: |
+    The Meta Llama 3.2 collection of multilingual large language models (LLMs) is a collection of pretrained and instruction-tuned generative models in 1B and 3B sizes (text in/text out). The Llama 3.2 instruction-tuned text only models are optimized for multilingual dialogue use cases, including agentic retrieval and summarization tasks. They outperform many of the available open source and closed chat models on common industry benchmarks.
+
+    Model Developer: Meta
+
+    Model Architecture: Llama 3.2 is an auto-regressive language model that uses an optimized transformer architecture. The tuned versions use supervised fine-tuning (SFT) and reinforcement learning with human feedback (RLHF) to align with human preferences
+  name: "llama-3.2-3b-instruct-q4_k_m"
+  urls:
+    - https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct
+    - https://huggingface.co/alphaduriendur/Llama-3.2-3B-Instruct-Q4_K_M-GGUF
+  overrides:
+    parameters:
+      model: llama-3.2-3b-instruct-q4_k_m.gguf
+  files:
+    - filename: llama-3.2-3b-instruct-q4_k_m.gguf
+      sha256: c5e6cf2c071a429e2380d2d1182c06a20b8c999d0c059636530e4a84beb8e8d4
+      uri: huggingface://alphaduriendur/Llama-3.2-3B-Instruct-Q4_K_M-GGUF/llama-3.2-3b-instruct-q4_k_m.gguf
+- !!merge <<: *llama32
+  description: |
+    The Meta Llama 3.2 collection of multilingual large language models (LLMs) is a collection of pretrained and instruction-tuned generative models in 1B and 3B sizes (text in/text out). The Llama 3.2 instruction-tuned text only models are optimized for multilingual dialogue use cases, including agentic retrieval and summarization tasks. They outperform many of the available open source and closed chat models on common industry benchmarks.
+
+    Model Developer: Meta
+
+    Model Architecture: Llama 3.2 is an auto-regressive language model that uses an optimized transformer architecture. The tuned versions use supervised fine-tuning (SFT) and reinforcement learning with human feedback (RLHF) to align with human preferences for helpfulness and safety.
+  name: "llama-3.2-1b-q4_k_m"
+  urls:
+    - https://huggingface.co/meta-llama/Llama-3.2-1B
+    - https://huggingface.co/alphaduriendur/Llama-3.2-1B-Q4_K_M-GGUF
+  overrides:
+    parameters:
+      model: llama-3.2-1b-q4_k_m.gguf
+  files:
+    - filename: llama-3.2-1b-q4_k_m.gguf
+      sha256: f8c965497de4f18749a9e07a58a28c1fd60d00866da392f10a5e49ec3d0318ab
+      uri: huggingface://alphaduriendur/Llama-3.2-1B-Q4_K_M-GGUF/llama-3.2-1b-q4_k_m.gguf
+- !!merge <<: *llama32
+  description: |
+    The Meta Llama 3.2 collection of multilingual large language models (LLMs) is a collection of pretrained and instruction-tuned generative models in 1B and 3B sizes (text in/text out). The Llama 3.2 instruction-tuned text only models are optimized for multilingual dialogue use cases, including agentic retrieval and summarization tasks. They outperform many of the available open source and closed chat models on common industry benchmarks.
+
+    Model Developer: Meta
+
+    Model Architecture: Llama 3.2 is an auto-regressive language model that uses an optimized transformer architecture. The tuned versions use supervised fine-tuning (SFT) and reinforcement learning with human feedback (RLHF) to align with human preferences
+  name: "llama-3.2-1b-instruct-q4_k_m"
+  urls:
+    - https://huggingface.co/meta-llama/Llama-3.2-1B-Instruct
+    - https://huggingface.co/alphaduriendur/Llama-3.2-1B-Instruct-Q4_K_M-GGUF
+  overrides:
+    parameters:
+      model: llama-3.2-1b-instruct-q4_k_m.gguf
+  files:
+    - filename: llama-3.2-1b-instruct-q4_k_m.gguf
+      sha256: 3f9075b857634315385a27b654a1df41708f7c3b41a028b4cd4d25b4e731394b
+      uri: huggingface://alphaduriendur/Llama-3.2-1B-Instruct-Q4_K_M-GGUF/llama-3.2-1b-instruct-q4_k_m.gguf
+- &codellama
+  url: "github:mudler/LocalAI/gallery/codellama.yaml@master" ### START Codellama
+  name: "codellama-7b-q4_k_m"
+  license: llama2
+  description: |
+    Code Llama is a collection of pretrained and fine-tuned generative text models ranging in scale from 7 billion to 34 billion parameters. This is the repository for the base 7B version in the Hugging Face Transformers format. This model is designed for general code synthesis and understanding. Links to other models can be found in the index at the bottom.
+  urls:
+    - https://huggingface.co/meta-llama/CodeLlama-7b-hf
+    - https://huggingface.co/alphaduriendur/CodeLlama-7b-hf-Q4_K_M-GGUF
+  tags:
+    - llm
+    - gguf
+    - gpu
+    - llama2
+    - cpu
+  overrides:
+    parameters:
+      model: codellama-7b-hf-q4_k_m.gguf
+  files:
+    - filename: codellama-7b-hf-q4_k_m.gguf
+      sha256: d842b9fd4bc5aecb257a8137b217fb5cc1e3f3f7a00b210c4a612ee07cd1434c
+      uri: huggingface://alphaduriendur/CodeLlama-7b-hf-Q4_K_M-GGUF/codellama-7b-hf-q4_k_m.gguf
+- !!merge <<: *codellama
+  description: |
+    Code Llama is a collection of pretrained and fine-tuned generative text models ranging in scale from 7 billion to 34 billion parameters. This is the repository for the base 7B version in the Hugging Face Transformers format. This model is designed for general code synthesis and understanding. Links to other models can be found in the index at the bottom.
+  name: "codellama-7b-python-q4_k_m"
+  urls:
+    - https://huggingface.co/meta-llama/CodeLlama-7b-Python-hf
+    - https://huggingface.co/alphaduriendur/CodeLlama-7b-Python-hf-Q4_K_M-GGUF
+  overrides:
+    parameters:
+      model: codellama-7b-python-hf-q4_k_m.gguf
+  files:
+    - filename: codellama-7b-python-hf-q4_k_m.gguf
+      sha256: 38fae19875556fd5561c0e100af02d1e2109fe0e3a48a274f209635662a7a58e
+      uri: huggingface://alphaduriendur/CodeLlama-7b-Python-hf-Q4_K_M-GGUF/codellama-7b-python-hf-q4_k_m.gguf
+- !!merge <<: *codellama
+  description: |
+    Code Llama is a collection of pretrained and fine-tuned generative text models ranging in scale from 7 billion to 34 billion parameters. This is the repository for the base 7B version in the Hugging Face Transformers format. This model is designed for general code synthesis and understanding. Links to other models can be found in the index at the bottom.
+  name: "codellama-7b-instruct-q4_k_m"
+  urls:
+    - https://huggingface.co/meta-llama/CodeLlama-7b-Instruct-hf
+    - https://huggingface.co/alphaduriendur/CodeLlama-7b-Instruct-hf-Q4_K_M-GGUF
+  overrides:
+    parameters:
+      model: codellama-7b-instruct-hf-q4_k_m.gguf
+  files:
+    - filename: codellama-7b-instruct-hf-q4_k_m.gguf
+      sha256: 16e1d644021e78b6338913e99af975a3144bbf79b5534a96e5102e6332e0fef3
+      uri: huggingface://alphaduriendur/CodeLlama-7b-Instruct-hf-Q4_K_M-GGUF/codellama-7b-instruct-hf-q4_k_m.gguf
+- &deepseek-r1
+  url: "github:mudler/LocalAI/gallery/deepseek-r1.yaml@master" ## Start DeepSeek-R1
+  description: |
+    DeepSeek-R1 is our advanced first-generation reasoning model designed to enhance performance in reasoning tasks.
+    Building on the foundation laid by its predecessor, DeepSeek-R1-Zero, which was trained using large-scale reinforcement learning (RL) without supervised fine-tuning, DeepSeek-R1 addresses the challenges faced by R1-Zero, such as endless repetition, poor readability, and language mixing.
+    By incorporating cold-start data prior to the RL phase,DeepSeek-R1 significantly improves reasoning capabilities and achieves performance levels comparable to OpenAI-o1 across a variety of domains, including mathematics, coding, and complex reasoning tasks.
+  icon: "https://avatars.githubusercontent.com/u/148330874"
+  urls:
+    - https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B
+    - https://huggingface.co/alphaduriendur/DeepSeek-R1-Distill-Qwen-1.5B-Q4_K_M-GGUF
+  tags:
+    - llm
+    - gguf
+    - gpu
+    - deepseek
+    - qwen
+    - cpu
+  license: mit
+  name: "deepseek-r1-distill-qwen-1.5b-q4_k_m"
+  overrides:
+    parameters:
+      model: deepseek-r1-distill-qwen-1.5b-q4_k_m.gguf
+  files:
+    - filename: deepseek-r1-distill-qwen-1.5b-q4_k_m.gguf
+      sha256: 41226dbf5d40776b5709741099c041d8df59fa465550874f0d06b10979d08822
+      uri: huggingface://alphaduriendur/DeepSeek-R1-Distill-Qwen-1.5B-Q4_K_M-GGUF/deepseek-r1-distill-qwen-1.5b-q4_k_m.gguf
+- &qwen25
+  name: "localai-functioncall-qwen2.5-7b-v0.5"
+  url: "github:mudler/LocalAI/gallery/qwen-fcall.yaml@master"
+  license: apache-2.0
+  tags:
+    - llm
+    - gguf
+    - gpu
+    - qwen
+    - qwen2.5
+    - cpu
+  icon: https://cdn-uploads.huggingface.co/production/uploads/647374aa7ff32a81ac6d35d4/Dzbdzn27KEc3K6zNNi070.png
+  urls:
+    - https://huggingface.co/mudler/LocalAI-functioncall-qwen2.5-7b-v0.5
+    - https://huggingface.co/mudler/LocalAI-functioncall-qwen2.5-7b-v0.5-Q4_K_M-GGUF
+  description: |
+    A model tailored to be conversational and execute function calls with LocalAI. This model is based on qwen2.5 (7B).
+  overrides:
+    parameters:
+      model: localai-functioncall-qwen2.5-7b-v0.5-q4_k_m.gguf
+  files:
+    - filename: localai-functioncall-qwen2.5-7b-v0.5-q4_k_m.gguf
+      sha256: 4e7b7fe1d54b881f1ef90799219dc6cc285d29db24f559c8998d1addb35713d4
+      uri: huggingface://mudler/LocalAI-functioncall-qwen2.5-7b-v0.5-Q4_K_M-GGUF/localai-functioncall-qwen2.5-7b-v0.5-q4_k_m.gguf
+- &qwen25coder
+  icon: https://avatars.githubusercontent.com/u/141221163
+  url: "github:mudler/LocalAI/gallery/chatml.yaml@master"
+  license: apache-2.0
+  tags:
+    - llm
+    - gguf
+    - gpu
+    - qwen
+    - qwen2.5
+    - cpu
+  name: "Qwen2.5-Coder-1.5B-q4_k_m"
+  urls:
+    - https://huggingface.co/Qwen/Qwen2.5-Coder-1.5B
+    - https://huggingface.co/alphaduriendur/Qwen2.5-Coder-1.5B-Q4_K_M-GGUF
+  description: |
+    Qwen2.5-Coder is the latest series of Code-Specific Qwen large language models (formerly known as CodeQwen). As of now, Qwen2.5-Coder has covered six mainstream model sizes, 0.5, 1.5, 3, 7, 14, 32 billion parameters, to meet the needs of different developers. Qwen2.5-Coder brings the following improvements upon CodeQwen1.5:
+
+        Significantly improvements in code generation, code reasoning and code fixing. Base on the strong Qwen2.5, we scale up the training tokens into 5.5 trillion including source code, text-code grounding, Synthetic data, etc. Qwen2.5-Coder-32B has become the current state-of-the-art open-source codeLLM, with its coding abilities matching those of GPT-4o.
+        A more comprehensive foundation for real-world applications such as Code Agents. Not only enhancing coding capabilities but also maintaining its strengths in mathematics and general competencies.
+        Long-context Support up to 128K tokens.
+  overrides:
+    parameters:
+      model: qwen2.5-coder-1.5b-q4_k_m.gguf
+  files:
+    - filename: qwen2.5-coder-1.5b-q4_k_m.gguf
+      sha256: d7bf1fc92ec385525cdb52f6a64be9acb58209871b12665f90a1c32fdbc21c51
+      uri: huggingface://alphaduriendur/Qwen2.5-Coder-1.5B-Q4_K_M-GGUF/qwen2.5-coder-1.5b-q4_k_m.gguf
+- !!merge <<: *qwen25coder
+  name: "Qwen2.5-Coder-1.5B-Instruct-q4_k_m"
+  urls:
+    - https://huggingface.co/Qwen/Qwen2.5-Coder-1.5B-Instruct
+    - https://huggingface.co/alphaduriendur/Qwen2.5-Coder-1.5B-Instruct-Q4_K_M-GGUF
+  overrides:
+    parameters:
+      model: qwen2.5-coder-1.5b-instruct-q4_k_m.gguf
+  files:
+    - filename: qwen2.5-coder-1.5b-instruct-q4_k_m.gguf
+      sha256: bb89fdff45d2d7f1a309682f7645354bc32fb1524adabc53b064524164950945
+      uri: huggingface://alphaduriendur/Qwen2.5-Coder-1.5B-Instruct-Q4_K_M-GGUF/qwen2.5-coder-1.5b-instruct-q4_k_m.gguf
+- !!merge <<: *qwen25coder
+  name: "Qwen2.5-Coder-3B-q4_k_m"
+  urls:
+    - https://huggingface.co/Qwen/Qwen2.5-Coder-3B
+    - https://huggingface.co/alphaduriendur/Qwen2.5-Coder-3B-Q4_K_M-GGUF
+  overrides:
+    parameters:
+      model: qwen2.5-coder-3b-q4_k_m.gguf
+  files:
+    - filename: qwen2.5-coder-3b-q4_k_m.gguf
+      sha256: 22debaca06eb718e59eb2db83e9fec1df0748feffd1ba927c6acb0e5054b19c7
+      uri: huggingface://alphaduriendur/Qwen2.5-Coder-3B-Q4_K_M-GGUF/qwen2.5-coder-3b-q4_k_m.gguf
+- !!merge <<: *qwen25coder
+  name: "Qwen2.5-Coder-3B-Instruct-q4_k_m"
+  urls:
+    - https://huggingface.co/Qwen/Qwen2.5-Coder-3B-Instruct
+    - https://huggingface.co/alphaduriendur/Qwen2.5-Coder-3B-Instruct-Q4_K_M-GGUF
+  overrides:
+    parameters:
+      model: qwen2.5-coder-3b-instruct-q4_k_m.gguf
+  files:
+    - filename: qwen2.5-coder-3b-instruct-q4_k_m.gguf
+      sha256: bc0ada49110b3b7c44bf1b35081abf9f71f569c2f14b5569aab38cd6d724ab93
+      uri: huggingface://alphaduriendur/Qwen2.5-Coder-3B-Instruct-Q4_K_M-GGUF/qwen2.5-coder-3b-instruct-q4_k_m.gguf
+- &gemma
+  url: "github:mudler/LocalAI/gallery/gemma.yaml@master"
+  name: "gemma-2b-chat"
+  urls:
+    - https://ai.google.dev/gemma/docs  
+    - https://huggingface.co/alphaduriendur/gemma-2b-it-Q4_K_M-GGUF
+  icon: https://avatars.githubusercontent.com/u/1342004
+  license: gemma
+  tags:
+    - llm
+    - gguf
+    - gpu
+    - cpu
+    - gemma
+  description: |
+    Open source LLM from Google (Instruction Tuned)
+  overrides:
+    parameters:
+      model: gemma-2b-it-q4_k_m.gguf
+  files:
+    - filename: gemma-2b-it-q4_k_m.gguf
+      sha256: 21d5e00ca1795b5cfd535b1b38d536ff142845c80fde0638110186a3899a9c17
+      uri: huggingface://alphaduriendur/gemma-2b-it-Q4_K_M-GGUF/gemma-2b-it-q4_k_m.gguf
+  
