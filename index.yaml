@@ -176,6 +176,30 @@
     - filename: localai-functioncall-qwen2.5-7b-v0.5-q4_k_m.gguf
       sha256: 4e7b7fe1d54b881f1ef90799219dc6cc285d29db24f559c8998d1addb35713d4
       uri: huggingface://mudler/LocalAI-functioncall-qwen2.5-7b-v0.5-Q4_K_M-GGUF/localai-functioncall-qwen2.5-7b-v0.5-q4_k_m.gguf
+- !!merge <<: *qwen25
+  name: "qwen2.5-1.5b-instruct-q4_k_m"
+  urls:
+    - https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct
+    - https://huggingface.co/alphaduriendur/Qwen2.5-1.5B-Instruct-Q4_K_M-GGUF
+  overrides:
+    parameters:
+      model: qwen2.5-1.5b-instruct-q4_k_m.gguf
+  files:
+    - filename: qwen2.5-1.5b-instruct-q4_k_m.gguf
+      sha256: 52e47664d0a0001bd58ffdd16beb6e6a0b3609bbfee7a439a462dc6285a23281
+      uri: huggingface://alphaduriendur/Qwen2.5-1.5B-Instruct-Q4_K_M-GGUF/qwen2.5-1.5b-instruct-q4_k_m.gguf
+- !!merge <<: *qwen25
+  name: "qwen2.5-3b-instruct-q4_k_m"
+  urls:
+    - https://huggingface.co/Qwen/Qwen2.5-VL-3B-Instruct
+    - https://huggingface.co/alphaduriendur/Qwen2.5-3B-Instruct-Q4_K_M-GGUF
+  overrides:
+    parameters:
+      model: qwen2.5-3b-instruct-q4_k_m.gguf
+  files:
+    - filename: qwen2.5-3b-instruct-q4_k_m.gguf
+      sha256: 5f84e8620223fbf57de40f88b805e6d0cd5d7d7398195a1b9734216822e3321b
+      uri: huggingface://alphaduriendur/Qwen2.5-3B-Instruct-Q4_K_M-GGUF/qwen2.5-3b-instruct-q4_k_m.gguf
 - &qwen25coder
   icon: https://avatars.githubusercontent.com/u/141221163
   url: "github:mudler/LocalAI/gallery/chatml.yaml@master"
@@ -263,4 +287,50 @@
     - filename: gemma-2b-it-q4_k_m.gguf
       sha256: 21d5e00ca1795b5cfd535b1b38d536ff142845c80fde0638110186a3899a9c17
       uri: huggingface://alphaduriendur/gemma-2b-it-Q4_K_M-GGUF/gemma-2b-it-q4_k_m.gguf
+- &qwen3
+  url: "https://github.com/mudler/LocalAI/blob/master/gallery/qwen3.yaml"
+  name: "qwen3-4b-instruct-2507-q4_k_m"
+  urls:
+    - https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507
+    - https://huggingface.co/alphaduriendur/Qwen3-4B-Instruct-2507-Q4_K_M-GGUF
+  icon: https://cdn-avatars.huggingface.co/v1/production/uploads/620760a26e3b7210c2ff1943/-s1gyJfvbE1RgO5iBeNOi.png
+  license: apache-2.0
+  tags:
+    - llm
+    - gguf
+    - gpu
+    - cpu
+    - qwen
+    - qwen3
+    - thinking
+    - reasoning
+  description: |
+    Qwen3 is the latest generation of large language models in Qwen series, offering a comprehensive suite of dense and mixture-of-experts (MoE) models. Built upon extensive training, Qwen3 delivers groundbreaking advancements in reasoning, instruction-following, agent capabilities, and multilingual support, with the following key features:
+
+      Uniquely support of seamless switching between thinking mode (for complex logical reasoning, math, and coding) and non-thinking mode (for efficient, general-purpose dialogue) within single model, ensuring optimal performance across various scenarios.
+      Significantly enhancement in its reasoning capabilities, surpassing previous QwQ (in thinking mode) and Qwen2.5 instruct models (in non-thinking mode) on mathematics, code generation, and commonsense logical reasoning.
+      Superior human preference alignment, excelling in creative writing, role-playing, multi-turn dialogues, and instruction following, to deliver a more natural, engaging, and immersive conversational experience.
+      Expertise in agent capabilities, enabling precise integration with external tools in both thinking and unthinking modes and achieving leading performance among open-source models in complex agent-based tasks.
+      Support of 100+ languages and dialects with strong capabilities for multilingual instruction following and translation.
+    Qwen3-30B-A3B has the following features:
+
+        Type: Causal Language Models
+        Training Stage: Pretraining & Post-training
+        Number of Parameters: 30.5B in total and 3.3B activated
+        Number of Paramaters (Non-Embedding): 29.9B
+        Number of Layers: 48
+        Number of Attention Heads (GQA): 32 for Q and 4 for KV
+        Number of Experts: 128
+        Number of Activated Experts: 8
+        Context Length: 32,768 natively and 131,072 tokens with YaRN.
+
+    For more details, including benchmark evaluation, hardware requirements, and inference performance, please refer to our blog, GitHub, and Documentation.
+  overrides:
+    parameters:
+      model: qwen3-4b-instruct-2507-q4_k_m.gguf
+  files:
+    - filename: qwen3-4b-instruct-2507-q4_k_m.gguf
+      sha256: f5dfb7b3b2a360d6aef941149a6a5841a599a73acbf2d66cd68f631063ca7826
+      uri: huggingface://alphaduriendur/Qwen3-4B-Instruct-2507-Q4_K_M-GGUF/qwen3-4b-instruct-2507-q4_k_m.gguf
+  
   
