@@ -3,7 +3,6 @@ name: "alphaduriendur-01"
 
 config_file: |
   backend: diffusers
-  cuda: true
   diffusers:
     cuda: true
     enable_parameters: negative_prompt,num_inference_steps
