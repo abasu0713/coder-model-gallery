@@ -1,10 +1,11 @@
-- name: "alphaduriendur-01"                                                                                                                                                                                  
-  config_file: |                                                                                                                                                                                             
-    backend: diffusers                                                                                                                                                                                       
-    diffusers:
-      cuda: true
-      enable_parameters: negative_prompt,num_inference_steps                                                                                                                                                 
-      pipeline_type: DiffusionPipeline
-    name: alphaduriendur-01
-    parameters:
-      model: alphaduriendur/alphaduriendur-01
+---
+name: "alphaduriendur-01"
+config_file: |
+  backend: diffusers
+  diffusers:
+    cuda: true
+    enable_parameters: negative_prompt,num_inference_steps
+    pipeline_type: DiffusionPipeline
+  name: alphaduriendur-01
+  parameters:
+    model: alphaduriendur/alphaduriendur-01
