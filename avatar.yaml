@@ -5,7 +5,7 @@ config_file: |
   diffusers:
     cuda: true
     enable_parameters: negative_prompt,num_inference_steps
-    pipeline_type: DiffusionPipeline
+    pipeline_type: StableDiffusionPipeline
   name: alphaduriendur-01
   parameters:
     model: alphaduriendur/alphaduriendur-01
